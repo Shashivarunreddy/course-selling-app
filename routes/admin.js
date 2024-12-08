@@ -4,6 +4,7 @@ const { adminModel} = require("../db");
  const adminRouter = Router();
 
 adminRouter.post("/signup", function(req, res){
+  const {name, email, password} = req.body;
   res.json({
     message  : "signup route"
   })
@@ -16,20 +17,20 @@ adminRouter.post("/signin", function(req, res){
   })
 })
 
-adminRouter.post("/", function(req, res){
+adminRouter.post("/course", function(req, res){
   res.json({
     message  : "signin route"
   })
 })
 
-adminRouter.put("/", function(req, res){
+adminRouter.put("/course", function(req, res){
   res.json({
     message  : "signin route"
   })
 })
 
 
-adminRouter.get("/bulk", function(req, res){
+adminRouter.get("/course/bulk", function(req, res){
   res.json({
     message  : "signin route"
   })
