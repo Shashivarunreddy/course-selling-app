@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { userRouter } = require('./routes/user');
@@ -14,7 +15,7 @@ app.use("/courses", courseRouter);
 
 async function main(){
 
-  await mongoose.connect("mongodb+srv://shashi:shashi@shashi.ou5z6.mongodb.net/coursera-app")
+  await mongoose.connect(process.env.MONGO_URL)
   app.listen(3000);
 }
 

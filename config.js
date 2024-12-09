@@ -1,5 +1,5 @@
-const JWT_USER_PASSWORD = "shashi";
-const JWT_ADMIN_PASSWORD ="shashisai27"; // replace with your secret key
+const JWT_USER_PASSWORD = process.env.JWT_USER_PASSWORD;
+const JWT_ADMIN_PASSWORD =process.env.JWT_ADMIN_PASSWORD; // replace with your secret key
 
 module.exports ={
   JWT_USER_PASSWORD,
